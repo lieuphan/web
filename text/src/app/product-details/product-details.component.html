@@ -1,0 +1,22 @@
+<div class="container mb-3 bg-light">
+  <div class="row p-2">
+    <div class="block" style="height: 450px; width: 200px;">
+      <img [src]="product?.hinhanh" class="card-img-top H-W--image">
+      <p>Đơn giá: {{product?.giasanpham}} vnđ</p>
+    </div>
+    <div style=" display: flex;
+    flex-direction:column;
+    width: 70%; margin: 10px;">
+      <h2 style="color:green ">{{product?.tensanpham}}</h2>
+      <p>{{product?.chitietsanpham}}</p>
+      <div>
+        <p>Số lượng:</p>
+        <input id="sl" type="number" style="width: 10%" name="Name" required="" value="1">
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-success" (click)="onAddCard()">Thêm vào giỏ hàng</button>
+        <button type="button" class="btn btn-outline-success" (click)="onGetCard(product.id)">Đi đến giỏ hàng</button>
+      </div>
+    </div>
+  </div>
+</div>

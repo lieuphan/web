@@ -1,0 +1,36 @@
+<div class="container mb-3 bg-light">
+  <div class="row p-2">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Tên sản phẩm</th>
+          <!-- <th scope="col">Hình ảnh</th> -->
+          <th scope="col">Đơn giá</th>
+          <th scope="col">Số lượng</th>
+          <th scope="col">Thành tiền</th>
+          <th scope="col">Xóa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr var="tongtien = 0" *ngFor="let card of cards">
+          <th scope="row"></th>
+          <td>{{card?.tensanpham}}</td>
+          <!-- <td>{{card?.hinhanh}}</td> -->
+          <td>{{card?.giasanpham}}</td>
+          <td>
+            {{card?.amount}}
+          </td>
+          <td>{{card?.giasanpham*card?.amount}}</td>
+          <td><button class="form-contrpl btn" name="xoa" value=""><span class="fa fa-trash" aria-hidden="true"
+                (click)="delCard(card.id)"></span></button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="card-block" style="height:100px; width:50%; display: block;
+ border:  1px solid #48bb4e; margin-right: 200px; margin-left: 400px">
+      <div>
+        <h2>Tổng tiền: {{tongtien}} VND </h2>
+      </div>
+    </div>
+  </div>

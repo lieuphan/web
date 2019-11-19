@@ -1,0 +1,46 @@
+<div class="container mb-3 bg-light">
+  <div class="row p-2">
+    <div class="col-lg-7 comment-bottom w3pvt_mail_grid_right">
+      <!-- <h1>Sửa đổi thông tin sản phẩm</h1><br/> -->
+      <form [formGroup]="editForm" (ngSubmit)="onSubmitEdit()">
+
+        <div class="col-lg-6 form-group">
+          <label>ID</label>
+          <input class="form-control" formControlName="id" type="text" name="Name" placeholder="id" disabled
+            required="">
+        </div>
+        <div class="col-lg-6 form-group">
+          <label>Hình ảnh</label>
+          <input type="file" (change)="imageUpload($event)" class="form-control" name="image" required="">
+        </div>
+        <div class="col-lg-6 form-group">
+          <label>Tên sản phẩm</label>
+          <input class="form-control" formControlName="tensanpham" type="text" placeholder="{{product.tensanpham}}"
+            name="Name" required="">
+        </div>
+        <div class="col-lg-6 form-group">
+          <label>Loại sản phẩm</label>
+          <input class="form-control" formControlName="loaisanpham" type="text" placeholder="{{product.loaisanpham}}"
+            name="Name" required="">
+        </div>
+        <div class="col-lg-6 form-group">
+          <label>Chi tiết sản phẩm</label>
+          <input class="form-control" formControlName="chitietsanpham" placeholder="{{product.chitietsanpham}}"
+            type="text" name="Name" required="">
+        </div>
+        <div class="col-lg-6 form-group">
+          <label>Giá tiền:</label>
+          <input class="form-control" formControlName="giasanpham" placeholder="{{product.giasanpham}}" type="number"
+            name="Name" required="">
+        </div>
+        <div class="col-lg-6 form-group">
+          <label>Số lượng:</label>
+          <input class="form-control" formControlName="soluong" placeholder="{{product.soluong}}" type="number"
+            name="Name" required="">
+        </div>
+        <button class="btn btn-outline-success" type="submit">Lưu</button>
+        <button class="btn btn-outline-success" routerLink="/product">Quay về</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<section class="contact-main py-5">
+  <div class="container py-md-5">
+      <h3 class="title-w3pvt text-center">Đăng kí</h3>
+
+      <div class="login px-sm-4 mx-auto mw-100 login-wrapper">
+          <form [formGroup]="registerForm" (ngSubmit)=onRegister() class="login-wrapper w3pvt_mail_grid_right" action="#" method="post">
+              <div class="form-group">
+                  <label>User Name</label>
+                  <input formControlName="name" class="form-control" type="text" name="Name" placeholder="" required="">
+              </div>
+
+              <div class="form-group">
+                  <label>Phone Number</label>
+                  <input formControlName="number" class="form-control" type="text" name="number" placeholder="" required="">
+              </div>
+
+              <div class="form-group">
+                  <label class="mb-2">Password</label>
+                  <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="" required="">
+              </div>
+              <button type="submit" class="btn btn-primary submit mt-2 read-more">Sign Up</button>
+              <p class="text-center mt-4">
+                  <a href="#">Bằng cách nhấp vào Đăng ký, tôi đồng ý với các điều khoản của bạn</a>
+
+              </p>
+          </form>
+      </div>
+
+
+
+
+  </div>
+</section>

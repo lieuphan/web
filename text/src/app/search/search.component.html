@@ -1,0 +1,25 @@
+<div class="container mb-3 bg-light">
+  <div class="row p-2">
+    <div class="row mt-5">
+      <div>
+        <div class="card-deck">
+          <div style="width: 200px; height: 350px; margin-left: 15px; margin-bottom: 100px"
+            *ngFor="let search of searchs">
+
+            <img [src]="search?.hinhanh" style="width: 200px; height: 200px" class="card-img-top H-W--image">
+            <div class="card-body" style="height: 50%; width: 100%">
+              <p> {{search?.tensanpham}}</p>
+              <p> {{search?.giasanpham}}</p>
+            </div>
+            <div class=" card-footer">
+              <button type="button" class="btn btn-outline-success" (click)="onGetProductDetail(product.id)"> Đặt
+                hàng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

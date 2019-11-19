@@ -1,0 +1,22 @@
+<div class="container mb-3 bg-light">
+  <div class="row p-2">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Email</th>
+          <th scope="col">Comment</th>
+
+          <!-- <th scope="col">Ngày nhập kho</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let email of arrComment">
+          <td></td>
+          <td>{{email?.email}}</td>
+          <td>{{email?.comment}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="container mb-3 bg-light">
+    <div class="row p-2">
+        <div class="container">
+            <!-- nav -->
+            <div class="top d-md-flex">
+                <div id="logo"
+                    style="color:rgb(211, 58, 173); font-size:x-small; font-family: 'Times New Roman', Times, serif">
+                    <h1>Beautiful Store</h1>
+                </div>
+                <div class="search-form mx-md-auto">
+                    <div class="form-w3layouts-grid">
+                        <form action="#" method="post" class="newsletter">
+                            <input class="search" type="search" id="name" placeholder="Search..." required="">
+                            <button class="form-contrpl btn" value="" (click)=" getSearch('name')"><span
+                                    class="fa fa-search" aria-hidden="true"></span></button>
+                        </form>
+                    </div>
+                </div>
+                <button class="form-contrpl btn" value=""><span class="fas fa-shopping-cart fa-2x"
+                        routerLink="/card/id"></span></button>
+                <div class="forms mt-md-0 mt-2" *ngIf="!isLogin">
+                    <a routerLink="/login" class="btn"><span class="fa fa-user-circle" aria-hidden="true"></span>Đăng
+                        nhập</a>
+                    <a routerLink="/register" class="btn"><span class="fa fa-pencil-square-o"></span>Đăng kí</a>
+                </div>
+                <div class="forms mt-md-0 mt-2" *ngIf="isLogin">
+                    <a routerLink="/home" class="btn" (click)="onLogout()"><span class="fa fa-share"
+                            aria-hidden="true"></span>Đăng
+                        xuất</a>
+                </div>
+            </div>
+            <nav class="text-center">
+                <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                <input type="checkbox" id="drop" />
+                <ul class="menu">
+                    <li><a routerLink="/home">Trang chủ</a></li>
+                    <li><a routerLink="/introduction">Giới thiệu</a></li>
+                    <!-- text -->
+                    <li>
+                        <div class="btn-group dropright">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                SẢN PHẨM
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" (click)="getClick('Son')">SON</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" (click)="getClick('Phan')">PHẤN CUSHION </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" (click)="getClick('Phan_mat')">PHẤN MẮT</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a routerLink="/contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <!-- //nav -->
+        </div>
+
+
+    </div>
+</div>

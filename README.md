@@ -1,1 +1,5 @@
-# web
+-Website shop bán mỹ phẩm online
+-Sử dụng html, css , boostrap 
+-Ngôn ngữ javascript
+-Framework angular
+-Dữ liệu firebase
